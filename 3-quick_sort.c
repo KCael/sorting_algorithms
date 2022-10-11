@@ -10,7 +10,7 @@
  */
 void quick_sort(int *array, size_t size)
 {
-	if (!array || size < 2)
+	if (array == NULL || size < 2)
 		return;
 	quicker_sort(array, size, 0, size - 1);
 }
@@ -49,15 +49,18 @@ void quicker_sort(int *array, size_t size, int l, int h)
  */
 int partition(int *array, size_t size, int l, int h)
 {
-	int pivot = array[h], i = 1, j;
+	int i = l - 1, j = l;
+	int pivot = array[h], swap = 0;
 
-	for (j = l; j <= h - 1; j++)
+	for (; j <= h - 1; j++)
 	{
 		if (array[j] < pivot)
 		{
-			if (i != j)
+			if (array[i] != array[j])
 			{
-				swap(&array[i], &array[j]);
+				swap = array[i];
+				array[i] = array[j];
+				array[j] = swap;
 				print_array(array, size);
 			}
 			i++;
@@ -65,27 +68,10 @@ int partition(int *array, size_t size, int l, int h)
 	}
 	if (pivot != array[i])
 	{
-		swap(&array[i], &array[h]);
+		swap = array[i + 1];
+		array[i + 1] = array[h];
+		array[h] = swap;
 		print_array(array, size);
 	}
-	return (i);
-}
-
-/**
- * swap - swaps elements in a given array
- * @ptr_a: the first argument
- * @ptr_b: second argument
- * Return: void
- *
- */
-void swap(int *ptr_a, int *ptr_b)
-{
-	int temp;
-
-	if (!ptr_a || !ptr_b)
-		return;
-
-	temp = *ptr_a;
-	*ptr_a = *ptr_b;
-	*ptr_b = temp;
+	return (i + 1);
 }
