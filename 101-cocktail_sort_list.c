@@ -1,5 +1,9 @@
 #include "sort.h"
 #include <stdio.h>
+#include <stdbool.h>
+
+void cocktail_sort_list(listint_t **list);
+void swap(listint_t **list, listint_t *node);
 
 /**
  * swap - swaps a node with the next node in the list
