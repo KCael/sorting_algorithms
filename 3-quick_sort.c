@@ -75,3 +75,15 @@ int partition(int *array, size_t size, int l, int h)
 	}
 	return (i + 1);
 }
+
+void swap(int *ptr_a, int *ptr_b)
+{
+	int temp;
+
+	if (!ptr_a || !ptr_b)
+		return;
+
+	temp = *ptr_a;
+	*ptr_a = *ptr_b;
+	*ptr_b = temp;
+}
