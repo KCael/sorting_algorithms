@@ -1,5 +1,5 @@
-#ifndef __SORT__
-#define __SORT__
+#ifndef SORT_H
+#define SORT_H
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -38,8 +38,8 @@ void quick_sort_hoare(int *array, size_t size);
 void sort_deck(deck_node_t **deck);
 
 /* QuickSort helper functions */
-void quicker_sort(int *array, size_t size, int lo, int hi);
-int partition(int *array, size_t size, int lo, int hi);
+void quicker_sort(int *array, size_t size, int l, int h);
+int partition(int *array, size_t size, int l, int h);
 
 void swap(int *ptr_a, int *ptr_b);
 void swap_ints(int *a, int *b);
