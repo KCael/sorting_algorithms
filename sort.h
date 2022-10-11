@@ -35,14 +35,10 @@ void heap_sort(int *array, size_t size);
 void radix_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
-void sort_deck(deck_node_t **deck);
 
 /* QuickSort helper functions */
 void quicker_sort(int *array, size_t size, int l, int h);
 int partition(int *array, size_t size, int l, int h);
 
-void swap(int *ptr_a, int *ptr_b);
-void swap_ints(int *a, int *b);
 
-
-#endif
+#endif /*_SORT_*/
