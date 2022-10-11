@@ -22,6 +22,7 @@ void quick_sort(int *array, size_t size)
  * @l: first index of array
  * @h: last index of array
  *
+ * Description: Sorts the array quicker
  * Return: 0
  */
 void quicker_sort(int *array, size_t size, int l, int h)
@@ -70,6 +71,13 @@ int partition(int *array, size_t size, int l, int h)
 	return (i);
 }
 
+/**
+ * swap - swaps elements in a given array
+ * @ptr_a: the first argument
+ * @ptr_b: second argument
+ * Return: void
+ *
+ */
 void swap(int *ptr_a, int *ptr_b)
 {
 	int temp;
