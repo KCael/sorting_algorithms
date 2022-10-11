@@ -48,7 +48,7 @@ void quicker_sort(int *array, size_t size, int l, int h)
  */
 int partition(int *array, size_t size, int l, int h)
 {
-	int pivot = array[h], i = l, j;
+	int pivot = array[h], i = 1, j;
 
 	for (j = l; j <= h - 1; j++)
 	{
