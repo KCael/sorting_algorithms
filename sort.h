@@ -24,5 +24,14 @@ void print_list(const listint_t *list);
 
 /* Sorting algorithms */
 void bubble_sort(int *array, size_t size);
+void insertion_sort_list(listint_t **list);
+
+/* QuickSort helper functions */
+void quicker_sort(int *array, size_t size, int lo, int hi);
+int partition(int *array, size_t size, int lo, int hi);
+
+void swap(int *ptr_a, int *ptr_b);
+void swap_ints(int *a, int *b);
+
 
 #endif
